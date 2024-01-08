@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikky Oj</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Montserrat:wght@300;400&family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <header>
+        <img src="images/ojlogo.png" alt="Oj logo" class="logo" />
+        <nav>
+          <button class="menu-icon" id="btn" aria-expanded="false">
+            <svg class="bar" viewBox="0 0 100 100" width="20">
+              <line
+                class="line top"
+                x1="90"
+                x2="10"
+                y1="30"
+                y2="30"
+                stroke-width="15"
+                stroke-linecap="round"
+                stroke-dasharray="80"
+                stroke-dashoffset="0"
+              ></line>
+              <line
+                class="line bottom"
+                x1="10"
+                x2="90"
+                y1="70"
+                y2="70"
+                stroke-width="15"
+                stroke-linecap="round"
+                stroke-dasharray="80"
+                stroke-dashoffset="0"
+              ></line>
+            </svg>
+          </button>
+          <ul id="nav" aria-expanded="false">
+            <li><a href="#" class="a">Home</a></li>
+            <li><a href="#" class="b">About Me</a></li>
+            <li><a href="#" class="c">My Work</a></li>
+            <li><a href="#" class="d">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="blob-bg">
+        <div class="bg1"></div>
+      </div>
+      <div class="hero-text">
+        <p class="paralax" data-rate=".2" data-direction="vertical">
+          Hello, World!!
+        </p>
+        <div class="meh paralax" data-rate=".2" data-direction="vertical">
+          <h1>I'm <span>Oj</span></h1>
+          <p class="text-effect">FullStack Developer</p>
+        </div>
+        <h1 class="shadow">I'm <span>Oj</span></h1>
+      </div>
+     <a href="#about">
+      <div class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
+          />
+        </svg>
+      </div>
+     </a>
+    </div>
+
+    <section id="about">
+      About Me
+    </section>
+    <section style="background-color: lightblue;">
+      My Work
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
