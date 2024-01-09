@@ -17,6 +17,8 @@ btn.addEventListener("click", () => {
   }
 });
 
+
+
 // paralax
 const targets = document.querySelectorAll(".paralax");
 
