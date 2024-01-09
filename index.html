@@ -18,6 +18,9 @@
     />
   </head>
   <body>
+    <div class="blob-bg">
+      <div class="bg1" id="blob"></div>
+    </div>
     <div class="hero">
       <header>
         <img src="images/ojlogo.png" alt="Oj logo" class="logo" />
@@ -52,46 +55,103 @@
             <li><a href="#" class="a">Home</a></li>
             <li><a href="#" class="b">About Me</a></li>
             <li><a href="#" class="c">My Work</a></li>
-            <li><a href="#" class="d">Contact</a></li>
+            <li>
+              <a href="mailto:ojebola.michael00@gmail.com" class="d">Contact</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <div class="blob-bg">
-        <div class="bg1"></div>
-      </div>
       <div class="hero-text">
         <p class="paralax" data-rate=".2" data-direction="vertical">
           Hello, World!!
         </p>
         <div class="meh paralax" data-rate=".2" data-direction="vertical">
-          <h1>I'm <span>Oj</span></h1>
+          <h1>
+            I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
+          </h1>
           <p class="text-effect">FullStack Developer</p>
+          <p class="text-effect">Product Designer</p>
+          <p class="text-effect">Webdev Tutor</p>
         </div>
-        <h1 class="shadow">I'm <span>Oj</span></h1>
+        <h1 class="shadow">
+          I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
+        </h1>
       </div>
-     <a href="#about">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
-          <path
-            d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
-          />
-        </svg>
-      </div>
-     </a>
+      <a href="#about">
+        <div class="icon">
+          <svg
+            id="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+          >
+            <path
+              d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
+            />
+          </svg>
+        </div>
+      </a>
     </div>
 
     <section id="about">
-      About Me
+      <div class="container">
+        <h2
+          class="title-shadow paralax"
+          data-rate=".3"
+          data-direction="vertical"
+        >
+          Get to Know Me
+        </h2>
+        <p class="text-large anim-text">
+          - I'm Michael Oj, a fullstack developer with over 3 years of work
+          experience and continuous self-development.
+        </p>
+
+        <p class="text-large tx-rt anim-text">
+          - I am enthusiastic about improvements, as I use codes to solve
+          problems.
+        </p>
+        <p class="text-large anim-text">
+          - I have great passion for music as I enjoy turning melodies into
+          stories that resonate with the very core of my being.
+        </p>
+      </div>
     </section>
-    <section style="background-color: lightblue;">
+    <section style="background-color: lightblue; height: 100vh">
       My Work
     </section>
 
     <script src="index.js"></script>
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.3/umd/index.min.js"></script>
+    <!-- lenis smooth scroller -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.24/bundled/lenis.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      const splitTypes = document.querySelectorAll(".anim-text");
+      console.log(splitTypes);
+
+      splitTypes.forEach((char, i) => {
+        const text = new SplitType(char, { types: "chars" });
+
+        gsap.from(text.chars, {
+          // defining the scroll trigger
+          scrollTrigger: {
+            trigger: char,
+            start: "top 80%",
+            end: "top 35%",
+            scrub: true,
+            markers: false,
+          },
+          opacity: 0,
+          y: -25,
+          stagger: 0.1,
+        });
+      });
+    </script>
   </body>
 </html>
