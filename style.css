@@ -154,7 +154,7 @@ header ul {
   padding-top: 2em;
   align-items: center;
   justify-content: left;
-  transition: clip-path 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: clip-path 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 header ul[aria-expanded="false"] {
   clip-path: circle(0% at 100% 0%);
