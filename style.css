@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 :root {
   --text-main: #010e1a;
   --text-secd: #0e063d;
   --bg-main: #f9f9f9;
   --ft-line: 'Bungee Outline', sans-serif;
-
+  --ft-title: 'Salsa', cursive;
+  --ft-text: 'Rubik', sans-serif;
 }
 /* 
 font-family: 'Bungee Outline', sans-serif;
-font-family: 'Montserrat', sans-serif;
 font-family: 'Rubik Doodle Shadow', system-ui;
+font-family: 'Salsa', cursive;
+font-family: 'Rubik', sans-serif;
 */
 * {
   margin: 0;
@@ -22,14 +27,14 @@ html {
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ft-text);
   position: relative;
 }
 
 .blob-bg {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   top: 0;
   left: 0;
   display: flex;
@@ -66,7 +71,7 @@ body {
   }
 }
 .hero {
-  height: 100dvh;
+  height: 100svh;
   position: relative;
   overflow: hidden;
 }
@@ -149,23 +154,23 @@ header ul {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: var(--text-main);
   padding-top: 2em;
   align-items: center;
   justify-content: left;
-  transition: clip-path 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: clip-path 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 header ul[aria-expanded="false"] {
-  clip-path: circle(0% at 100% 0%);
+  clip-path: inset(5% 5% 94% 90% round 20% 7% 7% 20%);
 }
 header ul[aria-expanded="true"] {
-  clip-path: circle(100%);
+  clip-path: inset(0 0 0 0);
 }
 header ul li {
   list-style: none;
   width: inherit;
-  padding: 1rem;
+  padding: 1rem 1.4rem;
   position: relative;
 }
 header ul li::before {
@@ -367,11 +372,13 @@ header ul li a.d {
 }
 .text-large{
   font-size: 2rem;
+  font-family: var(--ft-title);
   line-height: 1.3;
   color: var(--text-secd);
   font-weight: 550;
   margin-bottom: 3rem;
 }
+
 .tx-rt{
   text-align: right;
 }
@@ -391,6 +398,9 @@ header ul li a.d {
   .bg1 {
     width: 25%;
   }
+  header ul[aria-expanded="false"] {
+    clip-path: inset(0 0 100% 100% round 2% 0% 0% 25%);
+    }
   header ul li a {
     font-weight: bold;
     font-size: 3rem;
@@ -413,11 +423,11 @@ header ul li a.d {
     padding: 3rem 3.3rem;
   }
   .title-shadow{
-    font-size: 6.3rem;
+    font-size: 6.6rem;
     margin-bottom: 3rem;
   }
   .text-large{
-    font-size: 3.3rem;
+    font-size: 3.4rem;
     margin-bottom: 6rem;
   }
 }
