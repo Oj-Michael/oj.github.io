@@ -77,8 +77,9 @@
           I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
         </h1>
       </div>
-      <a href="#about">
-        <div class="icon">
+
+      <div class="icon">
+        <a href="#about">
           <svg
             id="svg"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,19 +91,15 @@
               d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
             />
           </svg>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
 
     <section id="about">
+      <h2 class="title-shadow paralax" data-rate=".4" data-direction="vertical">
+        Get to Know Me
+      </h2>
       <div class="container">
-        <h2
-          class="title-shadow paralax"
-          data-rate=".4"
-          data-direction="vertical"
-        >
-          Get to Know Me
-        </h2>
         <p class="text-large anim-text">
           - I'm Michael Oj, a fullstack developer with over 3 years of work
           experience and continuous self-development.
@@ -116,11 +113,24 @@
           - I have great passion for music as I enjoy turning melodies into
           stories that resonate with the very core of my being.
         </p>
+
+        <div class="cta-container">
+          <a href="#" class="cta">Read More <span> >> </span></a>
+        </div>
       </div>
     </section>
-    <section style="background-color: lightblue; height: 100vh">
-      My Work.
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, alias commodi assumenda molestias perferendis magnam! Cupiditate officiis quis hic? Distinctio iusto aliquid deleniti vitae enim voluptatum excepturi voluptates illum aspernatur!</p>
+
+    <section id="work">
+      <h2 class="title-shadow paralax" data-rate=".065" data-direction="vertical">
+        Services I Offer
+      </h2>
+      <div class="container">
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
+      </div>
     </section>
 
     <script src="index.js"></script>
@@ -128,9 +138,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.3/umd/index.min.js"></script>
-    <!-- lenis smooth scroller -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.24/bundled/lenis.min.js"></script>
-
+    <!-- lenis smooth scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
       const splitTypes = document.querySelectorAll(".anim-text");
@@ -153,6 +162,26 @@
           stagger: 0.1,
         });
       });
+
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
     </script>
   </body>
 </html>
