@@ -467,13 +467,13 @@ header ul li a.d {
   display: grid;
   gap: inherit;
 }
-.a{
+.wa{
   box-shadow: 0 0 2px #000000
 }
-.b{
+.wb{
   box-shadow: 0 0 2px darkred;
 }
-.c{
+.wc{
   box-shadow: 0 0 2px #4785c4;
 }
 .work-info{
