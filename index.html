@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Yrsa:wght@300;400&display=swap"
       rel="stylesheet"
     />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="blob-bg">
@@ -146,15 +146,15 @@
               <div class="p-logo-container niass">
                 <img src="images/niass-logo.png" />
               </div>
-              <h3 class="p-title">NiassAuto Wheels</h3>
-              <p class="p-text">
+              <h3 class="p-title hidden">NiassAuto Wheels</h3>
+              <p class="p-text hidden-bounce">
                 I independently crafted and developed this product, employing my forward-thinking end-to-end design process. The result is a compelling experience tailored to meet the needs of both the client and a broader user base.
               </p>
               <a href="https://niassautowheels.ng" target="_blank" class="cta"
                 >Visit Site <span> >> </span></a
               >
             </div>
-            <div class="work-img niass">
+            <div class="work-img hidden-bounce niass">
               <img src="images/niass.png" />
             </div>
           </div>
@@ -164,8 +164,8 @@
               <div class="p-logo-container ai-africa">
                 <img src="images/name.png" />
               </div>
-              <h3 class="p-title">AI AFRICA</h3>
-              <p class="p-text">
+              <h3 class="p-title hidden">AI AFRICA</h3>
+              <p class="p-text hidden-bounce">
                 This platform serves as a user-friendly hub, enabling seamless registration and active participation in upcoming events, ensuring a cohesive and enjoyable experience throughout the entirety of the website.
               </p>
               <a href="https://aiafrica.ng" target="_blank" class="cta"
@@ -173,7 +173,7 @@
               >
             </div>
 
-            <div class="work-img ai-africa">
+            <div class="work-img hidden-bounce ai-africa">
               <img src="images/ai-africa.png" />
             </div>
           </div>
@@ -183,8 +183,8 @@
               <div class="p-logo-container saf">
                 <img src="images/SAF.png" />
               </div>
-              <h3 class="p-title">SAF POLYTECHNIC PORTAL</h3>
-              <p class="p-text">
+              <h3 class="p-title hidden">SAF POLYTECHNIC PORTAL</h3>
+              <p class="p-text hidden-bounce">
                 I designed, analyzed, and developed a school portal for
                 department students, providing access to academic resources
                 including timetables, registration, handouts, textbook
@@ -198,7 +198,7 @@
               >
             </div>
 
-            <div class="work-img saf">
+            <div class="work-img hidden-bounce saf">
               <img src="images/saf-img.png" />
             </div>
           </div>
@@ -333,7 +333,7 @@
             markers: false,
           },
           opacity: 0,
-          y: -25,
+          y: -15,
           stagger: 0.1,
         });
       });
@@ -365,9 +365,6 @@
 
       gsap.ticker.lagSmoothing(0);
 
-      lenis.on("scroll", (e) => {
-        console.log(e);
-      });
 
       function raf(time) {
         lenis.raf(time);
@@ -405,7 +402,6 @@
       for (let i = 0; i < langs.length; i++) {
         var delay = 500;
         langs[i].style.animationDelay = delay * i + "ms";
-        console.log(langs[i]);
       }
     </script>
   </body>
