@@ -2,7 +2,6 @@
 // to toggle the menu
 const btn = document.getElementById("btn");
 const nav = document.getElementById("nav");
-const bar = document.querySelector(".bar");
 let isOpen = false;
 
 btn.addEventListener("click", () => {
@@ -43,3 +42,28 @@ window.addEventListener("scroll", function () {
 
 // Initial positioning on page load
 window.dispatchEvent(new Event("scroll"));
+
+// page transitioning
+window.onload = () => {
+  const transitionElement = document.querySelector(".transition");
+  const transitionElement2 = document.querySelector(".abc");
+  const achors = document.querySelectorAll(".a-links");
+  setTimeout(() => {
+    transitionElement.classList.remove("is-active");
+    transitionElement2.classList.remove("is-active");
+  }, 500);
+  for (let i = 0; i < achors.length; i++) {
+    const ach = achors[i];
+    ach.addEventListener("click", (e) => {
+      e.preventDefault();
+      let target = e.target.href;
+
+      transitionElement.classList.add("is-active");
+      transitionElement2.classList.add("is-active");
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 500);
+    });
+  }
+};
