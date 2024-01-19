@@ -1,0 +1,32 @@
+.transition{
+    position: fixed;
+    z-index: 101;
+    background-color: var(--text-main);
+    transition: 0.5s ease-out;
+}
+.transition-1{
+    width: 100%;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.transition-1.is-active{
+    transform: scaleX(1);
+}
+
+.transition-2{
+    width: 100%;
+    height: 50vh;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.transition-2.is-active{
+    transform: scaleX(1);
+}
+
