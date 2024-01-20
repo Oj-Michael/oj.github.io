@@ -51,6 +51,39 @@ body {
   font-family: var(--ft-text);
   position: relative;
 }
+/* page loader */
+.counter{
+  font-size: 100px;
+  font-family: var(--ft-line);
+  line-height: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2rem;
+  color: var(--bg-main);
+  z-index: 103;
+  pointer-events: none;
+}
+
+.overlay{
+  z-index: 102;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  display: flex;
+}
+.overlay .bar{
+  pointer-events: none;
+  width: 20%;
+  height: 100%;
+  background: var(--text-main);
+}
 
 /* animate on scroll */
 .hidden{
@@ -713,6 +746,10 @@ footer{
 }
 
 @media only screen and (min-width: 700px) {
+  .counter{
+    font-size: 15vw;
+    padding: 3rem;
+  }
   header {
     padding: 1em 3em;
   }
