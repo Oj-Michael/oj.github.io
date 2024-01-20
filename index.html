@@ -29,313 +29,314 @@
     <link rel="stylesheet" href="transition.css" />
   </head>
   <body>
+    <!-- page loader -->
+    <h1 class="counter">0</h1>
+    <div class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
     <!-- transition element -->
     <div class="transition transition-1 is-active"></div>
     <div class="transition transition-2 abc is-active"></div>
+    <header>
+      <img src="images/ojlogo.png" alt="Oj logo" class="logo" />
+      <nav>
+        <button class="menu-icon" id="btn" aria-expanded="false">
+          <svg class="bar" viewBox="0 0 100 100" width="20">
+            <line
+              class="line top"
+              x1="90"
+              x2="10"
+              y1="30"
+              y2="30"
+              stroke-width="15"
+              stroke-linecap="round"
+              stroke-dasharray="80"
+              stroke-dashoffset="0"
+            ></line>
+            <line
+              class="line bottom"
+              x1="10"
+              x2="90"
+              y1="70"
+              y2="70"
+              stroke-width="15"
+              stroke-linecap="round"
+              stroke-dasharray="80"
+              stroke-dashoffset="0"
+            ></line>
+          </svg>
+        </button>
+        <ul id="nav" aria-expanded="false">
+          <li><a href="index.html" class="a a-links">Home</a></li>
+          <li><a href="about.html" class="b a-links">About Me</a></li>
+          <li><a href="work.html" class="c a-links">My Work</a></li>
+          <li>
+            <a href="Resume_MichealOjebola.docx" download class="d"
+              >My Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="blob-bg">
+      <div class="bg1" id="blob"></div>
+    </div>
 
-    <div class="hidden-bounce">
-      <div class="blob-bg">
-        <div class="bg1" id="blob"></div>
-      </div>
-      <header>
-        <img src="images/ojlogo.png" alt="Oj logo" class="logo" />
-        <nav>
-          <button class="menu-icon" id="btn" aria-expanded="false">
-            <svg class="bar" viewBox="0 0 100 100" width="20">
-              <line
-                class="line top"
-                x1="90"
-                x2="10"
-                y1="30"
-                y2="30"
-                stroke-width="15"
-                stroke-linecap="round"
-                stroke-dasharray="80"
-                stroke-dashoffset="0"
-              ></line>
-              <line
-                class="line bottom"
-                x1="10"
-                x2="90"
-                y1="70"
-                y2="70"
-                stroke-width="15"
-                stroke-linecap="round"
-                stroke-dasharray="80"
-                stroke-dashoffset="0"
-              ></line>
-            </svg>
-          </button>
-          <ul id="nav" aria-expanded="false">
-            <li><a href="index.html" class="a a-links">Home</a></li>
-            <li><a href="about.html" class="b a-links">About Me</a></li>
-            <li><a href="work.html" class="c a-links">My Work</a></li>
-            <li>
-              <a href="Resume_MichealOjebola.docx" download class="d"
-                >My Resume</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div class="hero">
-        <div class="hero-text">
-          <p class="paralax" data-rate=".2" data-direction="vertical">
-            Hello, World!!
-          </p>
-          <div class="meh paralax" data-rate=".2" data-direction="vertical">
-            <h1>
-              I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
-            </h1>
-            <p class="text-effect">FullStack Developer</p>
-            <p class="text-effect">Product Designer</p>
-            <p class="text-effect">Webdev Tutor</p>
-          </div>
-          <h1 class="shadow">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="paralax" data-rate=".2" data-direction="vertical">
+          Hello, World!!
+        </p>
+        <div class="meh paralax" data-rate=".2" data-direction="vertical">
+          <h1>
             I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
           </h1>
+          <p class="text-effect">FullStack Developer</p>
+          <p class="text-effect">Product Designer</p>
+          <p class="text-effect">Webdev Tutor</p>
         </div>
-
-        <div class="icon">
-          <a href="#about">
-            <svg
-              id="svg"
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 -960 960 960"
-              width="24"
-            >
-              <path
-                d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
-              />
-            </svg>
-          </a>
-        </div>
+        <h1 class="shadow">
+          I'm <span class="mike">Michael</span> <span class="oj">Oj</span>
+        </h1>
       </div>
 
-      <section id="about">
-        <h2
-          class="title-shadow paralax"
-          data-rate=".4"
-          data-direction="vertical"
-        >
-          Get to Know Me
-        </h2>
-        <div class="container">
-          <p class="text-large anim-text">
-            - I'm Michael Oj, a fullstack developer with over 3 years of work
-            experience and continuous self-development.
-          </p>
+      <div class="icon">
+        <a href="#about">
+          <svg
+            id="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+          >
+            <path
+              d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
 
-          <p class="text-large tx-rt anim-text">
-            - I am enthusiastic about improvements, as I use codes to solve
-            problems.
-          </p>
-          <p class="text-large anim-text">
-            - I have great passion for music as I enjoy turning melodies into
-            stories that resonate with the very core of my being.
-          </p>
+    <section id="about">
+      <h2 class="title-shadow paralax" data-rate=".4" data-direction="vertical">
+        Get to Know Me
+      </h2>
+      <div class="container">
+        <p class="text-large anim-text">
+          - I'm Michael Oj, a fullstack developer with over 3 years of work
+          experience and continuous self-development.
+        </p>
 
-          <div class="cta-container">
-            <a href="about.html" class="cta hidden a-links"
-              >Read More <span> >> </span></a
-            >
-          </div>
-        </div>
-      </section>
+        <p class="text-large tx-rt anim-text">
+          - I am enthusiastic about improvements, as I use codes to solve
+          problems.
+        </p>
+        <p class="text-large anim-text">
+          - I have great passion for music as I enjoy turning melodies into
+          stories that resonate with the very core of my being.
+        </p>
 
-      <section id="work">
-        <h2
-          class="title-shadow paralax"
-          data-rate=".065"
-          data-direction="vertical"
-        >
-          Some of my Works
-        </h2>
-        <div class="container">
-          <div class="work-container">
-            <div class="work-item span-2 wa hidden-bounce">
-              <div class="work-info">
-                <div class="p-logo-container niass">
-                  <img src="images/niass-logo.png" />
-                </div>
-                <h3 class="p-title hidden">NiassAuto Wheels</h3>
-                <p class="p-text hidden-bounce">
-                  I independently crafted and developed this product, employing
-                  my forward-thinking end-to-end design process. The result is a
-                  compelling experience tailored to meet the needs of both the
-                  client and a broader user base.
-                </p>
-                <a
-                  href="https://niassautowheels.ng"
-                  target="_blank"
-                  class="cta a-links"
-                  >Visit Site <span> >> </span></a
-                >
-              </div>
-              <div class="work-img hidden-bounce niass">
-                <img src="images/niass.png" />
-              </div>
-            </div>
-
-            <div class="work-item wb hidden-bounce">
-              <div class="work-info">
-                <div class="p-logo-container ai-africa">
-                  <img src="images/name.png" />
-                </div>
-                <h3 class="p-title hidden">AI AFRICA</h3>
-                <p class="p-text hidden-bounce">
-                  This platform serves as a user-friendly hub, enabling seamless
-                  registration and active participation in upcoming events,
-                  ensuring a cohesive and enjoyable experience throughout the
-                  entirety of the website.
-                </p>
-                <a
-                  href="https://aiafrica.ng"
-                  target="_blank"
-                  class="cta a-links"
-                  >Visit Site <span> >> </span></a
-                >
-              </div>
-
-              <div class="work-img hidden-bounce ai-africa">
-                <img src="images/ai-africa.png" />
-              </div>
-            </div>
-
-            <div class="work-item wc hidden-bounce">
-              <div class="work-info">
-                <div class="p-logo-container saf">
-                  <img src="images/SAF.png" />
-                </div>
-                <h3 class="p-title hidden">SAF POLYTECHNIC PORTAL</h3>
-                <p class="p-text hidden-bounce">
-                  I designed, analyzed, and developed a school portal for
-                  department students, providing access to academic resources
-                  including timetables, registration, handouts, textbook
-                  purchases, assignment submissions, and more
-                </p>
-                <a
-                  href="https://mikkyoj.github.io/safdummy.github.io/"
-                  target="_blank"
-                  class="cta a-links"
-                  >Visit Site <span> >> </span></a
-                >
-              </div>
-
-              <div class="work-img hidden-bounce saf">
-                <img src="images/saf-img.png" />
-              </div>
-            </div>
-          </div>
-          <a href="work.html" class="cta hidden a-links"
-            >See More <span> >> </span></a
+        <div class="cta-container">
+          <a href="about.html" class="cta hidden a-links"
+            >Read More <span> >> </span></a
           >
         </div>
-      </section>
-      <!-- stack section -->
-      <section id="stack">
-        <div class="x-scroll">
-          <h2 class="title-shadow scroll">
-            INNOVATION CREATIVITY INNOVATION CREATIVITY
-          </h2>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3 class="title hidden">Technologies I Use</h3>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2
+        class="title-shadow paralax"
+        data-rate=".065"
+        data-direction="vertical"
+      >
+        Some of my Works
+      </h2>
+      <div class="container">
+        <div class="work-container">
+          <div class="work-item span-2 wa hidden-bounce">
+            <div class="work-info">
+              <div class="p-logo-container niass">
+                <img src="images/niass-logo.png" />
+              </div>
+              <h3 class="p-title hidden">NiassAuto Wheels</h3>
               <p class="p-text hidden-bounce">
-                With over three years of hands-on experience in software
-                development and product design, I have honed my proficiency in a
-                variety of technologies, and being up to date with the latest
-                developments.
+                I independently crafted and developed this product, employing my
+                forward-thinking end-to-end design process. The result is a
+                compelling experience tailored to meet the needs of both the
+                client and a broader user base.
               </p>
-              <p class="p-text hidden-bounce">
-                This extensive period of work and learning has equipped me not
-                only with expertise in high-demand technologies but also with a
-                versatile skill set that enables me to utilize various
-                applications to get the work done.
-              </p>
+              <a
+                href="https://niassautowheels.ng"
+                target="_blank"
+                class="cta a-links"
+                >Visit Site <span> >> </span></a
+              >
             </div>
-            <div class="col lang-container">
-              <span class="lang hidden">HTML</span
-              ><span class="lang hidden">CSS</span
-              ><span class="lang hidden">JavaScript</span
-              ><span class="lang hidden">Bootstrap</span
-              ><span class="lang hidden">SCSS</span
-              ><span class="lang hidden">React Js</span
-              ><span class="lang hidden">Three Js</span
-              ><span class="lang hidden">Gsap</span
-              ><span class="lang hidden">Barba Js</span
-              ><span class="lang hidden">Node</span
-              ><span class="lang hidden">Php</span
-              ><span class="lang hidden">Laravel</span
-              ><span class="lang hidden">MySql</span
-              ><span class="lang hidden">Mongo Db</span
-              ><span class="lang hidden">Python</span
-              ><span class="lang hidden">C #</span
-              ><span class="lang hidden">Java</span
-              ><span class="lang hidden">Wordpress</span
-              ><span class="lang hidden">Photoshop</span
-              ><span class="lang hidden">Figma</span>
-              <span class="lang hidden">Canva</span
-              ><span class="lang hidden">Chat GPT</span>
-              <span class="lang hidden">GitHub</span>
+            <div class="work-img hidden-bounce niass">
+              <img src="images/niass.png" />
+            </div>
+          </div>
+
+          <div class="work-item wb hidden-bounce">
+            <div class="work-info">
+              <div class="p-logo-container ai-africa">
+                <img src="images/name.png" />
+              </div>
+              <h3 class="p-title hidden">AI AFRICA</h3>
+              <p class="p-text hidden-bounce">
+                This platform serves as a user-friendly hub, enabling seamless
+                registration and active participation in upcoming events,
+                ensuring a cohesive and enjoyable experience throughout the
+                entirety of the website.
+              </p>
+              <a href="https://aiafrica.ng" target="_blank" class="cta a-links"
+                >Visit Site <span> >> </span></a
+              >
+            </div>
+
+            <div class="work-img hidden-bounce ai-africa">
+              <img src="images/ai-africa.png" />
+            </div>
+          </div>
+
+          <div class="work-item wc hidden-bounce">
+            <div class="work-info">
+              <div class="p-logo-container saf">
+                <img src="images/SAF.png" />
+              </div>
+              <h3 class="p-title hidden">SAF POLYTECHNIC PORTAL</h3>
+              <p class="p-text hidden-bounce">
+                I designed, analyzed, and developed a school portal for
+                department students, providing access to academic resources
+                including timetables, registration, handouts, textbook
+                purchases, assignment submissions, and more
+              </p>
+              <a
+                href="https://mikkyoj.github.io/safdummy.github.io/"
+                target="_blank"
+                class="cta a-links"
+                >Visit Site <span> >> </span></a
+              >
+            </div>
+
+            <div class="work-img hidden-bounce saf">
+              <img src="images/saf-img.png" />
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- contact -->
-      <section id="contact">
-        <h2
-          class="title-shadow paralax"
-          data-rate="0.009"
-          data-direction="vertical"
+        <a href="work.html" class="cta hidden a-links"
+          >See More <span> >> </span></a
         >
-          Let's Talk
+      </div>
+    </section>
+    <!-- stack section -->
+    <section id="stack">
+      <div class="x-scroll">
+        <h2 class="title-shadow scroll">
+          INNOVATION CREATIVITY INNOVATION CREATIVITY
         </h2>
-        <div class="container">
-          <p class="text-large anim ctc">
-            <a href="mailto:ojebola.michael00@gmail.com" class="cc">
-              - CONTACT -
-            </a>
-          </p>
-
-          <footer>
-            <div class="socials hidden">
-              <a
-                href="https://twitter.com/ojebzy04?t=DoqQOZcxpUUCeq5v4uqtzA&s=09"
-                ><i
-                  class="fa-brands fa-x-twitter socail-icon"
-                  style="color: #ddd; cursor: pointer"
-                ></i
-              ></a>
-              <a href="https://github.com/MikkyOj"
-                ><i
-                  class="fa-brands fa-github socail-icon"
-                  style="color: #ddd; cursor: pointer"
-                ></i
-              ></a>
-              <a href="https://wa.link/8yqopu"
-                ><i
-                  class="fa-brands fa-whatsapp socail-icon"
-                  style="color: #ddd; cursor: pointer"
-                ></i
-              ></a>
-              <a href="mailto:ojebola.michael00@gmail.com"
-                ><i
-                  class="fa-regular fa-envelope socail-icon"
-                  style="color: #ddd; cursor: pointer"
-                ></i
-              ></a>
-            </div>
-
-            <p class="p-text">Designed and Developed by Oj</p>
-          </footer>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3 class="title hidden">Technologies I Use</h3>
+            <p class="p-text hidden-bounce">
+              With over three years of hands-on experience in software
+              development and product design, I have honed my proficiency in a
+              variety of technologies, and being up to date with the latest
+              developments.
+            </p>
+            <p class="p-text hidden-bounce">
+              This extensive period of work and learning has equipped me not
+              only with expertise in high-demand technologies but also with a
+              versatile skill set that enables me to utilize various
+              applications to get the work done.
+            </p>
+          </div>
+          <div class="col lang-container">
+            <span class="lang hidden">HTML</span
+            ><span class="lang hidden">CSS</span
+            ><span class="lang hidden">JavaScript</span
+            ><span class="lang hidden">Bootstrap</span
+            ><span class="lang hidden">SCSS</span
+            ><span class="lang hidden">React Js</span
+            ><span class="lang hidden">Three Js</span
+            ><span class="lang hidden">Gsap</span
+            ><span class="lang hidden">Barba Js</span
+            ><span class="lang hidden">Node</span
+            ><span class="lang hidden">Php</span
+            ><span class="lang hidden">Laravel</span
+            ><span class="lang hidden">MySql</span
+            ><span class="lang hidden">Mongo Db</span
+            ><span class="lang hidden">Python</span
+            ><span class="lang hidden">C #</span
+            ><span class="lang hidden">Java</span
+            ><span class="lang hidden">Wordpress</span
+            ><span class="lang hidden">Photoshop</span
+            ><span class="lang hidden">Figma</span>
+            <span class="lang hidden">Canva</span
+            ><span class="lang hidden">Chat GPT</span>
+            <span class="lang hidden">GitHub</span>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+      <h2
+        class="title-shadow paralax"
+        data-rate="0.009"
+        data-direction="vertical"
+      >
+        Let's Talk
+      </h2>
+      <div class="container">
+        <p class="text-large anim ctc">
+          <a href="mailto:ojebola.michael00@gmail.com" class="cc">
+            - CONTACT -
+          </a>
+        </p>
+
+        <footer>
+          <div class="socials hidden">
+            <a href="https://twitter.com/ojebzy04?t=DoqQOZcxpUUCeq5v4uqtzA&s=09"
+              ><i
+                class="fa-brands fa-x-twitter socail-icon"
+                style="color: #ddd; cursor: pointer"
+              ></i
+            ></a>
+            <a href="https://github.com/MikkyOj"
+              ><i
+                class="fa-brands fa-github socail-icon"
+                style="color: #ddd; cursor: pointer"
+              ></i
+            ></a>
+            <a href="https://wa.link/8yqopu"
+              ><i
+                class="fa-brands fa-whatsapp socail-icon"
+                style="color: #ddd; cursor: pointer"
+              ></i
+            ></a>
+            <a href="mailto:ojebola.michael00@gmail.com"
+              ><i
+                class="fa-regular fa-envelope socail-icon"
+                style="color: #ddd; cursor: pointer"
+              ></i
+            ></a>
+          </div>
+
+          <p class="p-text">Designed and Developed by Oj</p>
+        </footer>
+      </div>
+    </section>
+
     <script src="index.js"></script>
     <!-- javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -344,6 +345,46 @@
     <!-- lenis smooth scrolling -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script>
+      function startloader() {
+        let counterEl = document.querySelector(".counter");
+        let count = 0;
+
+        function updateCouner() {
+          if (count == 100) {
+            return;
+          }
+
+          count = Math.floor(Math.random() * 100) + 1;
+          if (count > 101) {
+            count = 100;
+          }
+          counterEl.textContent = count;
+
+          let delay = Math.floor(Math.random() * 200) + 50;
+          setTimeout(updateCouner, delay);
+        }
+        updateCouner();
+      }
+
+      startloader();
+
+      gsap.to(".counter", 0.2, {
+        delay: 2.5,
+        opacity: 0,
+      });
+
+      gsap.to(".bar", 1.5, {
+        delay: 2.6,
+        height: 0,
+        stagger: 0.1,
+        ease: "power4.inOut",
+      });
+
+      setTimeout(()=>{
+        document.querySelector(".counter").style.display = "none"
+        document.querySelector(".overlay").style.display = "none"
+
+      }, 4000)
       gsap.registerPlugin(ScrollTrigger);
       const splitTypes = document.querySelectorAll(".anim-text");
       const textTypes = document.querySelectorAll(".anim");
