@@ -333,45 +333,6 @@
     <!-- lenis smooth scrolling -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script>
-      function startloader() {
-        let counterEl = document.querySelector(".counter");
-        let count = 0;
-
-        function updateCouner() {
-          if (count == 100) {
-            return;
-          }
-
-          count = Math.floor(Math.random() * 100) + 1;
-          if (count > 101) {
-            count = 100;
-          }
-          counterEl.textContent = count;
-
-          let delay = Math.floor(Math.random() * 200) + 50;
-          setTimeout(updateCouner, delay);
-        }
-        updateCouner();
-      }
-
-      startloader();
-
-      gsap.to(".counter", 0.2, {
-        delay: 2.5,
-        opacity: 0,
-      });
-
-      gsap.to(".bar", 1.5, {
-        delay: 2.6,
-        height: 0,
-        stagger: 0.1,
-        ease: "power4.inOut",
-      });
-
-      setTimeout(() => {
-        document.querySelector(".counter").style.display = "none";
-        document.querySelector(".overlay").style.display = "none";
-      }, 4000);
       gsap.registerPlugin(ScrollTrigger);
       const splitTypes = document.querySelectorAll(".anim-text");
       const textTypes = document.querySelectorAll(".anim");
